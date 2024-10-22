@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Beranda{% endblock %}
+
+{% block content %}
+<section class="header-info">
+    <h2>SD NEGERI JUNGSEN 1</h2>
+    <h3>2024/2025</h3>
+</section>
+
+<section class="data-summary">
+    <div class="summary-item">
+        <p>{{ students | length }}</p>
+        <h4>Jumlah Murid</h4>
+    </div>
+    <div class="summary-item">
+        <p>{{ jumlah_mata_pelajaran }}</p>
+        <h4>Mata Pelajaran</h4>
+    </div>
+</section>
+
+<div class="info-message">
+    <p class="alert">! Harap lakukan input nilai sebelum 30 Maret</p>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama Siswa</th>
+            <th>NISN</th>
+            <th>Alamat</th>
+            <th>Edit</th>
+            <th>Hapus</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ student.nama }}</td>
+            <td>{{ student.nisn }}</td>
+            <td>{{ student.alamat }}</td>
+            <td>
+                <button class="icon-button" title="Edit">
+                    <i class="fas fa-edit"></i>
+                </button>
+            </td>
+            <td>
+                <button class="icon-button" title="Hapus">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="button-view">
+    <button class="view-button">Lihat Semua Data</button>
+</div>
+{% endblock %}

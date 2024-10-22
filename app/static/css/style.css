@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #007bff;
+  --hover-color: #0056b3;
+  --text-color: #585656;
+  --border-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  height: 100vh;
+}
