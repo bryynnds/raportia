@@ -17,18 +17,7 @@ def gurus():
 @app.route('/')
 def beranda():
     return show_beranda()
-
-
-
-
-
-
-
-
-
-
-
-
+  
 @app.route('/admin/<name>')
 def admin(name):
     return render_template("index.html", content=name)
