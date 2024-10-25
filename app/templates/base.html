@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-list-search.css' rel='stylesheet'>
-    <title>Top Game Of The Year</title>
+    <title>Raportia | Tools Rapor</title>
 </head>
 <body>
     <nav class="sidebar close">
@@ -17,13 +16,11 @@
                 <span class="image">
                     <img src="logo.png" alt="logo">
                 </span>
-
                 <div class="text header-text">
                     <span class="name">Raportia</span>
                     <span class="profession">Tools</span>
                 </div>
             </div>
-
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
@@ -33,37 +30,44 @@
                     <i class='bx bx-search-alt icon'></i>
                     <input id="input1" type="search" placeholder="Cari Data...">
                 </li>
-                
+
+                <!-- Link ke Beranda -->
                 <li class="nav-link">
-                    <a href="index.php">
+                    <a href="{{ url_for('beranda') }}">
                         <i class='bx bxs-home icon'></i>
                         <span class="text nav-text">Beranda</span>
                     </a>
                 </li>
+
+                <!-- Link ke Data Siswa -->
                 <li class="nav-link">
-                    <a href="criteria.php">
+                    <a href="{{ url_for('data_siswa') }}">
                         <i class='bx bxs-box icon'></i>
                         <span class="text nav-text">Data Siswa</span>
                     </a>
                 </li>
+
+                <!-- Link ke Input -->
                 <li class="nav-link">
-                    <a href="evaluation.php">
+                    <a href="{{ url_for('input') }}">
                         <i class='bx bxs-spreadsheet icon'></i>
                         <span class="text nav-text">Input</span>
                     </a>
                 </li>
+
+                <!-- Link ke Cetak -->
                 <li class="nav-link">
-                    <a href="calculate.php">
+                    <a href="{{ url_for('cetak') }}">
                         <i class='bx bxs-printer icon'></i>
                         <span class="text nav-text">Cetak</span>
                     </a>
                 </li>
-                </ul>
             </div>
 
             <div class="bottom-content">
-                <li class="">
-                    <a href="login.php">
+                <!-- Link ke Daftar Nilai -->
+                <li class="nav-link">
+                    <a href="{{ url_for('daftar_nilai') }}">
                         <i class='bx bxs-user icon'></i>
                         <span class="text nav-text">Daftar Nilai</span>
                     </a>
@@ -75,26 +79,19 @@
                         <i class='bx bxs-moon icon sun'></i>
                     </div>
                     <span class="mode-text text">Day Mode</span>
-
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
-
-
                 </li>
-
             </div>
         </div>
     </nav>
-    
-    <section class="home">
 
-        
+    <section class="home">
+        {% block content %}
+        {% endblock %}
     </section>
 
-    <footer>
-        <!-- Footer di sini -->
-    </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

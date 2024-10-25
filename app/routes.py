@@ -1,27 +1,28 @@
-from app import app, db
-from flask import request, redirect, url_for, render_template
-from app.controller import GuruController
+# routes.py
+from flask import render_template
+from app import app
 from app.controller.BerandaController import show_beranda
-
-from app.controller.controller import get_siswa_with_mata_pelajaran, get_mata_pelajaran, get_nilai_for_siswa
-
-@app.route('/guru', methods=['GET', 'POST'])
-def gurus():
-  if request.method=='GET':
-    return GuruController.index()
-  else:
-    return GuruController.save()
-  
-  return 'Guru'
 
 @app.route('/')
 def beranda():
     return show_beranda()
-  
-@app.route('/admin/<name>')
-def admin(name):
-    return render_template("index.html", content=name)
 
-@app.route('/success/<name>')
-def success(name):
-    return 'walcome %s' % name
+@app.route('/data_siswa')
+def data_siswa():
+    # Logika untuk menampilkan halaman Data Siswa
+    return render_template('data_siswa.html')
+
+@app.route('/input')
+def input():
+    # Logika untuk menampilkan halaman Input
+    return render_template('input.html')
+
+@app.route('/cetak')
+def cetak():
+    # Logika untuk menampilkan halaman Cetak
+    return render_template('cetak.html')
+
+@app.route('/daftar_nilai')
+def daftar_nilai():
+    # Logika untuk menampilkan halaman Daftar Nilai
+    return render_template('daftar_nilai.html')
