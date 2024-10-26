@@ -15,7 +15,8 @@
     --primary-color-light: #363636;
     --toggle-color: linear-gradient(to right, #abc091, #6bc478);
     --text-color: #454545;
-    --text-color2: #494949;
+    --text-color2: #898989;
+    --text-color3: #454545;
     --random-color1: #ffffff;
     --dark-color: #1980d3;
     --hover-color: #ffffff;
@@ -414,8 +415,11 @@
         padding: 8px;
         background-color: var(--hover-color);
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(111, 111, 111, 0.1); /* Smooth shadow */
-        overflow-x: auto; /* Untuk mengatasi tabel yang terlalu lebar */
+        box-shadow: 0 4px 8px rgba(111, 111, 111, 0.1);
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative; /* Memungkinkan penggunaan absolute positioning di dalam */
     }
     
     .data-table1 table {
@@ -468,8 +472,8 @@
         padding-top: 12px;
         padding-right: 12px;
         padding-bottom: 18px;
+        margin-bottom: 12px;
         background: var(--widget2);
-        margin-bottom: 30px;
         box-shadow: 0 4px 8px rgba(111, 111, 111, 0.1);
     }
 
@@ -477,11 +481,11 @@
         color: var(--primary-color);
         font-weight: bold;
         font-size: 12px;
-        padding-top: 20px;
+        padding-top: 2px;
     }
 
     .foot-data2 {
-        color: var(--text-color2);
+        color: var(--text-color3);
         font-weight: bold;
         font-size: 12px;
         padding-top: 10px;
@@ -499,13 +503,13 @@
         padding-right: 12px;
         padding-bottom: 16px;
         border-radius: 12px;
-        margin-bottom: 30px;
         background-color: var(--widget);
         box-shadow: 0 4px 8px rgba(111, 111, 111, 0.1);
+        margin-bottom: 12px;
     }
 
     .header-data {
-        color: var(--text-color2);
+        color: var(--text-color3);
         font-size: 40px;
     }
 
@@ -521,6 +525,128 @@
         font-size: 24px;
         cursor: pointer;
     }
+
+    .garis {
+        width: 30px;      
+        height: 1.5px;     
+        background-color: rgb(200, 200, 200); 
+        border-radius: 2px;
+        margin: 0 auto; 
+    }
+
+    .kotakgaris {
+        padding-bottom: 12px;
+    }
+
+    input[type="number"] {
+        width: 60px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 8px;
+        border: none;
+        background-color: #e9e9e9;
+    }
+    
+    
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Menghilangkan spinner */
+    margin: 0; /* Menghilangkan margin */
+    }
+
+    .container3 {
+        padding-top: 12px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    label {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    select {
+        background-color: var(--sidebar-color);
+        color: var(--text-color2);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid rgb(197, 197, 197); /* Tambahkan jenis border */
+        border-radius: 8px;
+        transition: border-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(111, 111, 111, 0.1);
+    }
+    
+    
+    select:focus {
+        border-color: #5d5d5d; /* Warna border saat dropdown difokuskan */
+        outline: none; /* Menghilangkan outline default */
+    }
+    
+    option {
+        padding: 16px; /* Jarak dalam opsi */
+    }
+
+    .input {
+        display: inline-block;
+        padding-top: 7px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 7px;
+        margin-top: 10px;
+        margin-left: 12px;
+        margin-right: 18px;
+        margin-bottom: 10px;
+        background: var(--body-color);          
+        color: white;                    
+        border-radius: 8px;              
+        text-align: center; 
+        cursor: pointer;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(111, 111, 111, 0.1);             
+    }
+
+    .input a {
+        color: white;                
+        text-decoration: none;       
+    }
+
+    .simpan {
+        display: inline-block;
+        padding: 7px 16px;
+        background: var(--body-color);
+        color: white;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(111, 111, 111, 0.1);
+        margin-top: 20px;
+        margin-right: 18px;
+        margin-bottom: 8px;
+        align-self: flex-end; /* Memposisikan tombol di pojok kanan bawah */
+    }
+
+    .kertas {
+        font-size: 30px;
+        font-weight: 500;
+        color: #8c8c8c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 600px;
+        background-color: var(--sidebar-color);
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(111, 111, 111, 0.103);
+    }
+    
+    
+    
 
 
     
