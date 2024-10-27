@@ -26,3 +26,7 @@ def daftar_nilai():
 @app.route('/profil')
 def profil():
     return render_template('profil.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Raport Tools</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style-login.css') }}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+      <img src="{{ url_for('static', filename='img/backgraund-login.png') }}" alt="Logo Perusahaan" class="logo">
+  </header>
+
+  <div class="container">
+    <main>
+      <div class="label">
+        <h1>Sign in to<br />Raport Tools</h1>
+      </div>
+      <form class="packLogin" id="loginForm">
+        <div class="button">
+          <input type="email" id="email" placeholder="Email" class="input-field" required aria-label="Email">
+          <i class='bx bx-envelope'></i>
+        </div>
+        <div class="button">
+          <input type="password" id="password" placeholder="Password" class="input-field" required aria-label="Password">
+          <i class='bx bxs-lock'></i>
+        </div>
+        <div class="box">
+          <label class="rememberMe">
+            <input type="checkbox" class="rectangle" aria-label="Remember me">
+            <span class="text-wrapper">Remember me</span>
+          </label>
+          <div class="lupaPw">Lupa Password?</div>
+        </div>
+
+        <button type="button" class="button-signin" onclick="login()">
+          <div class="text-wrapper">Sign in</div>
+        </button>
+      </form>
+      <p>Jika belum mempunyai akun harap hubungi admin.</p>
+    </main>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Ganti dengan email dan password admin yang benar
+      const adminEmail = 'admin';
+      const adminPassword = 'admin';
+
+      if (email === adminEmail && password === adminPassword) {
+        window.location.href = '/';
+      } else {
+        alert('Email atau password salah. Silakan coba lagi.');
+      }
+    }
+  </script>
+</body>
+</html>
