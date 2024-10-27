@@ -23,6 +23,6 @@ def cetak():
 def daftar_nilai():
     return render_template('daftar_nilai.html')
 
-@app.route('/profil')  # Ganti nama fungsi di sini
-def profil():  # Mengubah nama fungsi untuk menghindari konflik
+@app.route('/profil')
+def profil():
     return render_template('profil.html')
