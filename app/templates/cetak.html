@@ -1,45 +1,67 @@
-{% extends 'base.html' %}
-
-{% block title %}Data Siswa - My Website{% endblock %}
-
+{% extends 'base.html' %} {% block title %}Data Siswa - My Website{% endblock %}
 {% block content %}
 <div class="main-section">
-    <div class="bar">
-        <div class="inbar">
-            <div class="left-section">
-                <i class='bx bxs-building-house logo'></i>
-                <span class='sub'>SD NEGERI JUNGSEMI 1</span>
-            </div>
-            <span class="sub2">2024/2025</span>
-        </div>
+  <div class="bar">
+    <div class="inbar">
+      <div class="left-section">
+        <i class="bx bxs-building-house logo"></i>
+        <span class="sub">SD NEGERI JUNGSEMI 1</span>
+      </div>
+      <span class="sub2">2024/2025</span>
     </div>
+  </div>
 </div>
 
 <div class="container">
-    <div class="left">
-        <div class="kertas">
-            404 Not Found
-        </div>
-        
+  <div class="left">
+    <div class="notice">
+      <i class="bx bx-info-circle"></i>
+      <span>Harap lakukan input nilai sebelum tanggal 30 Februari</span>
     </div>
 
-    <div class="content right">
-        <div class="widget">
-            <div class="subwidget2">
-                <i class='bx bx-chart chart'></i>
-            </div>
-            <h1 class="header-data">6</h1>
-            <p class="foot-data2">Total Guru</p>
-        </div>
+    <div class="dokumen">
+      <h2>Cetak Dokumen</h2>
+      <div class="kelas-select">
+        <label for="kelas">Kelas</label>
+        <select id="kelas">
+          <option value="1">Kelas 1</option>
+          <option value="2">Kelas 2</option>
+          <option value="3">Kelas 3</option>
+          <option value="4">Kelas 4</option>
+          <option value="5">Kelas 5</option>
+          <option value="6">Kelas 6</option>
+        </select>
+      </div>
 
-        <div class="widget">
-            <div class="subwidget2">
-                <i class='bx bx-dice-3 chart2'></i>
-            </div>
-            <h1 class="header-data">4</h1>
-            <p class="foot-data2">Total Siswa</p>
-        </div>
+      <div class="buttons">
+        <button class="btn preview">Preview</button>
+        <button class="btn cetak">Cetak</button>
+      </div>
+
+      <div class="pdf-preview">
+        <div class="pdf-box">Preview PDF</div>
+        <div class="pdf-box">Preview PDF</div>
+      </div>
     </div>
+  </div>
+
+  <div class="content right">
+    <div class="widget">
+      <div class="subwidget2">
+        <i class="bx bx-chart chart"></i>
+      </div>
+      <h1 class="header-data">6</h1>
+      <p class="foot-data2">Total Guru</p>
+    </div>
+
+    <div class="widget">
+      <div class="subwidget2">
+        <i class="bx bx-dice-3 chart2"></i>
+      </div>
+      <h1 class="header-data">4</h1>
+      <p class="foot-data2">Total Siswa</p>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
