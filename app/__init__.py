@@ -11,5 +11,5 @@ app.config.from_object(config)
 db= SQLAlchemy(app)
 migrate=Migrate(app, db)
 
-from app.model import user, guru, kelas, siswa, kehadiran, mataPelajaran, nilai, laporan
+from app.model import user, guru, kelas, siswa, mataPelajaran, nilai, laporan
 from app import routes

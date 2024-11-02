@@ -1,7 +1,7 @@
 # routes.py
 from flask import render_template
 from app import app
-from app.controller.BerandaController import show_beranda
+from app.controller.BerandaController import show_beranda, show_data_siswa
 
 @app.route('/')
 def beranda():
@@ -9,7 +9,7 @@ def beranda():
 
 @app.route('/data_siswa')
 def data_siswa():
-    return render_template('data_siswa.html')
+    return show_data_siswa()
 
 @app.route('/input')
 def input():
@@ -30,4 +30,6 @@ def profil():
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+
 
