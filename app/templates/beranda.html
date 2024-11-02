@@ -25,76 +25,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for siswa in siswa_list %}
                     <tr>
-                        <td>1</td>
-                        <td>Adi Wijaya</td>
-                        <td>1234567890</td>
-                        <td>Jl. Merdeka No. 10</td>
-                        <td>12 Januari 1966</td>
-                        <td>L</td>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ siswa.nama }}</td>
+                        <td>{{ siswa.nisn }}</td>
+                        <td>{{ siswa.alamat }}</td>
+                        <td>{{ siswa.tanggal_lahir.strftime('%d %B %Y') }}</td>
+                        <td>{{ siswa.jenis_kelamin.value }}</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Siti Nurhaliza</td>
-                        <td>0987654321</td>
-                        <td>Jl. Kebangsaan No. 15</td>
-                        <td>9 November 2001</td>
-                        <td>P</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Budi Santoso</td>
-                        <td>1122334455</td>
-                        <td>Jl. Harmoni No. 5</td>
-                        <td>15 Mei 2002</td>
-                        <td>L</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Lina Kartika</td>
-                        <td>6677889900</td>
-                        <td>Jl. Sudirman No. 20</td>
-                        <td>25 Desember 2003</td>
-                        <td>P</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Andi Prasetyo</td>
-                        <td>5566778899</td>
-                        <td>Jl. Diponegoro No. 12</td>
-                        <td>30 Juli 2002</td>
-                        <td>L</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Ratna Sari</td>
-                        <td>2233445566</td>
-                        <td>Jl. Majapahit No. 7</td>
-                        <td>10 Agustus 2000</td>
-                        <td>P</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Doni Ramadhan</td>
-                        <td>3344556677</td>
-                        <td>Jl. Kartini No. 8</td>
-                        <td>1 Januari 2001</td>
-                        <td>L</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Wulan Dewi</td>
-                        <td>4455667788</td>
-                        <td>Jl. Diponegoro No. 15</td>
-                        <td>5 Februari 2002</td>
-                        <td>P</td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
-                
             </table>
         </div>
     </div>
-    
 
     <div class="content right">
         <div class="status">
@@ -118,7 +62,6 @@
         <div class="widget">
             <div class="subwidget2">
                 <i class='bx bx-dice-3 chart2'></i>
-
             </div>
             <h1 class="header-data">4</h1>
             <p class="foot-data2">Total Siswa</p>
